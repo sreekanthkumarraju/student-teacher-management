@@ -83,9 +83,9 @@ export default function CreateStudent({teachers}){
     return(
 
         <div>
-            <p className="text-danger fs-2">Create Student</p>
+           
             <form className="form-container" onSubmit={handleSubmit}>
-            
+            <p className="text-danger fs-2">Create Student</p>
                 <label id='create-firstName'>First Name</label>
                 <input type='text' id='firstName' name="firstName" className='student-fname' value={value.firstName} onChange={handleChange}></input>
 

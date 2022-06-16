@@ -62,7 +62,7 @@ export default function EditTeacher(){
         getStudentDetails()   
         
      },[])
-     
+
      useEffect(()=>{
          if(count>0)
          {
@@ -80,6 +80,7 @@ export default function EditTeacher(){
             (teachers) ?
             
             <form  className='edit-teacher' onSubmit={handleSubmit}>
+                <p className="text-danger fs-2">Update Teacher</p>
                 <input type='text' id='firstName'  name='firstName'className="edit-teacher-fname" placeholder="First Name" value={teachers.firstName} onChange={handleChange}/>
                 <input type='text' id='lastName' name='lastName' className="edit-teacher-lname" placeholder="Last Name" value={teachers.lastName} onChange={handleChange}/>
                 <input type='email' id='mail' name='email' className="edit-teacher-email" placeholder="Email" value={teachers.email} onChange={handleChange}/>
