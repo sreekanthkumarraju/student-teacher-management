@@ -37,6 +37,7 @@ export default function Edit({teachers}){
         event.preventDefault()
         console.log(students)
         setCount(count+1)
+       
         console.log(count)
        
     }
@@ -59,6 +60,7 @@ export default function Edit({teachers}){
             }  
 
      useEffect(()=>{
+       
         getStudentDetails()   
         
      },[])
@@ -67,6 +69,7 @@ export default function Edit({teachers}){
          {
         updateStudentDetails()
         console.log(count)
+       
          }
          
           
@@ -96,8 +99,8 @@ export default function Edit({teachers}){
                    <option value='mechanical engineering'>Mechanical Engineering</option>
                 </select>
                 <label id='mentors'>Assign a mentor </label>
-                <select name='mentor' id='mentor' value={students.mentor} onChange={handleChange}>
-                  
+                <select name='mentor' id='mentor' defaultValue={"default"} value={students.mentor} onChange={handleChange}>
+                <option value={"default"} >Choose an option</option>
                    {teachers.map((teacher) => (
                      <option value={teacher.id}>{teacher.id}</option>
                    ))}

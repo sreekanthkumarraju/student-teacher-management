@@ -15,20 +15,11 @@ import TeacherProfile from "./components/Teacher_Management/TeacherProfile";
 
 export default function Body(){
     const [teachers,setTeachers]=useState([])
-    const [students,setStudents]=useState([])
+
+  
     
-    const getStudentDetails=()=>{
-
-       axios.get('https://629ef6b78b939d3dc28b227c.mockapi.io/students')
-       .then((resp)=>{
-           console.log(resp.data)
-           setStudents(resp.data)
-       })
-       .catch((err)=>{
-           console.log(err)
-       })
-
-    }
+  
+  
     
     const getTeacherDetails=()=>{
 
@@ -45,20 +36,17 @@ export default function Body(){
     console.log(teachers)
 
     useEffect(()=>{
-
-        getTeacherDetails()
-        getStudentDetails()
-         
+         getTeacherDetails()
       },[])
     return(
         <Routes>
          <Route path='/student' element={<ListStudents/>}> </Route>
          <Route path='student/create-student' element={<CreateStudent teachers={teachers}/>}></Route>  
          <Route path='student/profile/:id' element={<Profile teachers={teachers}/>}></Route>
-         <Route path='student/edit/:id' element={<Edit teachers={teachers}/>}></Route>
+         <Route path='student/edit/:id' element={<Edit teachers={teachers} />}></Route>
          <Route path='/teacher' element={<ListTeacher/>}></Route>
          <Route path='/teacher/create-teacher' element={<CreateTeacher/>}></Route>
-         <Route path='/teacher/teacher-profile/:id' element={<TeacherProfile students={students}/>}></Route>
+         <Route path='/teacher/teacher-profile/:id' element={<TeacherProfile />}></Route>
          <Route path='/teacher/edit-teacher/:id' element={<EditTeacher/>}></Route>
 
         </Routes>

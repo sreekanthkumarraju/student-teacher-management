@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import { useParams,Link } from "react-router-dom";
 
 
-export default function TeacherProfile({students}){
+export default function TeacherProfile(){
    
     const {id}=useParams()
     const [teacher,setTeacher]=useState([])
+    const [students,setStudents]=useState([])
 
    
-    const getStudentDetails=async ()=>{
+    const getTeacherDetails=async ()=>{
 
       await axios.get(`https://629ef6b78b939d3dc28b227c.mockapi.io/teachers/${id}`)
        
@@ -17,13 +18,29 @@ export default function TeacherProfile({students}){
            console.log(resp.data)
            setTeacher((prevState)=>(          
                resp.data             
-            ))          
+            ))    
+              
        })
        .catch((err)=>{
            console.log(err)
        })
 
     }
+
+
+    const getStudentDetails=()=>{
+
+        axios.get('https://629ef6b78b939d3dc28b227c.mockapi.io/students')
+        .then((resp)=>{
+            console.log(resp.data)
+            setStudents(resp.data)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+ 
+     }
+    
        
      const student=students.filter((findstudent)=>{
               return findstudent.mentor===id
@@ -32,6 +49,7 @@ export default function TeacherProfile({students}){
      console.log(student)
       useEffect(()=>{
          getStudentDetails()
+         getTeacherDetails()
       },[])
 
 
