@@ -1,12 +1,6 @@
-.form-container{
-  border:1px solid black;
-  margin-left:350px;
-  margin-right: 50px;
-  height:60vh;
-  text-align: center;
-}
 
-#create-email,#courses,#course,#mentor,#create-student{
+
+#create-email,#courses,#course,#mentors,#mentor,#create-student{
    
     display:block;
     margin:10px auto 0;

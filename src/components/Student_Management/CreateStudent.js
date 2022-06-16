@@ -105,7 +105,7 @@ export default function CreateStudent({teachers}){
                     
                 </select>
 
-                <label id='mentor'>Assign a mentor </label>
+                <label id='mentors'>Assign a mentor </label>
                 <select name='mentor' id='mentor' value={value.option} onChange={handleChange}>
                   
                    {teachers.map((teacher) => (
