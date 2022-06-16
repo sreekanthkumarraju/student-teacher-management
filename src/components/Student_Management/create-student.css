@@ -1,0 +1,40 @@
+.form-container{
+  border:1px solid black;
+  margin-left:350px;
+  margin-right: 50px;
+  height:60vh;
+  text-align: center;
+}
+
+#create-email,#courses,#course,#mentor,#create-student{
+   
+    display:block;
+    margin:10px auto 0;
+}
+
+.student-fname,.student-lname{
+    margin-top:50px;
+    margin-right: 20px;
+    margin-left: 10px;
+  text-align: center;
+}
+
+.student-fname,.student-lname{
+    width:200px;
+}
+
+.student-email{
+    width:400px;
+    text-align: center;
+
+}
+
+#course,#mentor{
+    width:300px;
+    text-align: center;
+}
+
+#create-student{
+    width:150px;
+    border-radius: 20px;
+}

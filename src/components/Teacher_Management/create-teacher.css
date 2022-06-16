@@ -1,0 +1,33 @@
+.teacher-form{
+    border: 1px solid black;
+    margin-left:380px;
+    margin-right: 30px;     
+    height:60vh;   
+   
+}
+
+
+.teacher-email-label,.teacher-doj-label,.teacher-salary-label,.create-button{
+    display: block;
+    margin-top: 10px;
+}
+
+.teacher-fname,.teacher-lname{
+    width:240px;
+    margin-top: 50px;
+    margin-left: 10px;
+    text-align: center;
+   
+}
+.teacher-lastname-label{
+    margin-left: 10px;
+}
+.teacher-email,.teacher-doj,.teacher-salary{
+    width:450px;
+    text-align: center;
+}
+.create-button{
+    margin:20px auto 0;
+    border-radius: 10px;
+    width:100px;
+}
