@@ -1,16 +1,9 @@
-.edit-teacher{
-    border:1px solid black;
-    margin-left: 380px;
-    margin-right:30px;
-    margin-top: 50px;
-    height:60vh;
-}
+
 
 .edit-teacher-fname,.edit-teacher-lname,.edit-teacher-email,.edit-teacher-doj,.edit-teacher-salary{
     display: block;
     width:500px;
-    margin-left: 180px;
-    margin-top: 20px;
+    margin:20px auto 0;
     text-align: center;
 
 }

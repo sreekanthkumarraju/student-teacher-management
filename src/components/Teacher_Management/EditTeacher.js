@@ -62,14 +62,13 @@ export default function EditTeacher(){
         getStudentDetails()   
         
      },[])
+     
      useEffect(()=>{
          if(count>0)
          {
         updateStudentDetails()
         console.log(count)
-         }
-         
-          
+         }       
      },[(count)])
 
    
