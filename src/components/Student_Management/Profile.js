@@ -44,7 +44,7 @@ export default function Profile({teachers}){
               (students) ? 
             <div>
           
-          <h1 style={{"textAlign":"center","marginTop":"60px"}}>{students.firstName}'s Profile</h1>
+          <h1 style={{"textAlign":"left","marginTop":"60px"}}>{students.firstName}'s Profile</h1>
            <div >
             <table style={{"float":"left"}}>
                 <tr>
